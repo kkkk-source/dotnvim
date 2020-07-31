@@ -1,55 +1,74 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General settings
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax on                              " Syntax highlighting
-set incsearch                          " Incremental search
-set nobackup                           " No auto backups
-set noerrorbells                       " Disable vim bells sounds
-set number relativenumber              " Display line numbers
-set nowrap                             " Display long lines as just one line
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                          $$\ $$\                                             "
+"                          $$ |$$ |                                            "
+"  $$$$$$\$$$$\   $$$$$$\  $$ |$$ |        $$\   $$\                           "
+"  $$  _$$  _$$\ $$  __$$\ $$ |$$ |$$$$$$\ $$ |  $$ |                          "
+"  $$ / $$ / $$ |$$ /  $$ |$$ |$$ |\______|$$ |  $$ |                          "
+"  $$ | $$ | $$ |$$ |  $$ |$$ |$$ |        $$ |  $$ |                          "
+"  $$ | $$ | $$ |\$$$$$$  |$$ |$$ |        \$$$$$$$ |                          "
+"  \__| \__| \__| \______/ \__|\__|         \____$$ |                          "
+"                                          $$\   $$ |                          "
+"                                          \$$$$$$  |                          "
+"  [k][https://neovim.io]                   \______/                           "
+"                                                                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tab and indent settings
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set expandtab                          " Use spaces instead of tabs
-set smarttab
-set smartindent                        " Reacts to the syntax/style of the code
-set shiftwidth=4                       " One tab = four spaces
-set tabstop=4 softtabstop=4            " One tab = four spaces 
+let sourcepath = 'source ~/.config/nvim/plug-config/'  
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" plugins settings                                                             "
+"                                                                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set nu
+execute sourcepath."vim-plug.vim"   | " github.com/junegunn/vim-plug 
+execute sourcepath."fzf.vim"        | " github.com/junegunn/fzf.vim
+execute sourcepath."airline.vim"    | " github.com/vim-airline/vim-airline
+execute sourcepath."vim-go.vim"     | " github.com/fatih/vim-go
+execute sourcepath."latex.vim"      | " 
 
-set smartcase
-set noswapfile
-set noshowmode
-set laststatus=0
-set noruler
-set noshowcmd
-set cursorline
-set autowrite
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" general settings                                                             "
+"                                                                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype indent plugin on             " 
+syntax on                             " enable syntax highlighting
+set incsearch                         " incremental search
+set nobackup                          " no auto backups
+set noerrorbells                      " disable vim bells sounds
+set number relativenumber             " display line numbers
+set nowrap                            " display long lines as just one line
+set cursorline                        " spot the cursor
+set undofile                          " save undos after files closes
+set undodir=~/.config/nvim/undodir    " where to save undo histories
+set hidden                            " needed to keep multiples buffers open
+set mouse=a                           " enable use of the mouse for all modes 
+set autowrite                         " 
 
-set undofile
-set undodir=~/.config/nvim/undodir
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tab and indent settings                                                      "
+"                                                                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tabstop=4 softtabstop=4           " one tab = four spaces 
+set shiftwidth=4                      " one tab = four spaces
+set expandtab                         " use spaces instead of tabs
+set smartindent                       " reacts to the syntax/style of the code
+set smarttab                          " 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" statusline settings                                                          "
+"                                                                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set laststatus=2                      " always show statusline
+                                      " i don't want to see: (default view)
+set noshowmode                        " [NORMAL]-------------------------------
+set noshowcmd                         "                                   23k
+set noruler                           " don't show the line and column number 
+                                      " of the cursor position
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Color settings
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme pablo
-set colorcolumn=80                  " Set color of column 80
-highlight ColorColumn ctermbg=39       " Change default colorcolumn
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" color settings                                                               "
+"                                                                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme pablo                     " 
+set colorcolumn=80                    " set color column 80
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ~/.config/nvim/plug-config/vim-plug.vim   " pluggin mannager
-
-source ~/.config/nvim/plug-config/airline.vim    " airline 
-source ~/.config/nvim/plug-config/fzf.vim        " fzf
-source ~/.config/nvim/plug-config/vim-go.vim     " go
-
-source ~/.config/nvim/plug-config/latex.vim
-let g:vim_be_good_floating = 0
