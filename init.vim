@@ -30,26 +30,26 @@ execute sourcepath."latex.vim"      | "
 " general settings                                                             "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype indent plugin on             " 
 syntax on                             " enable syntax highlighting
 set incsearch                         " incremental search
 set nobackup                          " no auto backups
 set noerrorbells                      " disable vim bells sounds
 set number relativenumber             " display line numbers
 set nowrap                            " display long lines as just one line
+set hidden                            " needed to keep multiples buffers open
+set autowrite                         " 
+set mouse=a                           " enable use of the mouse for all modes 
+set termguicolors                     " enable 24-bit RGB color
 set cursorline                        " spot the cursor
 set undofile                          " save undos after files closes
 set undodir=~/.config/nvim/undodir    " where to save undo histories
-set hidden                            " needed to keep multiples buffers open
-set mouse=a                           " enable use of the mouse for all modes 
-set autowrite                         " 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tab and indent settings                                                      "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tabstop=4 softtabstop=4           " one tab = four spaces 
-set shiftwidth=4                      " one tab = four spaces
+set shiftwidth=4                      " one tab = fur spaces
 set expandtab                         " use spaces instead of tabs
 set smartindent                       " reacts to the syntax/style of the code
 set smarttab                          " 
@@ -59,16 +59,18 @@ set smarttab                          "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2                      " always show statusline
-                                      " i don't want to see: (default view)
-set noshowmode                        " [NORMAL]-------------------------------
-set noshowcmd                         "                                   23k
-set noruler                           " don't show the line and column number 
-                                      " of the cursor position
+set noshowmode                        " hide status message
+set noshowcmd                         " turn off the display of commads
+set noruler                           " 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " color settings                                                               "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme pablo                     " 
-set colorcolumn=80                    " set color column 80
+set colorcolumn=80                    " spot column 80
+hi ColorColumn guibg=#10C0C0          " set column color
+hi CursorLine guibg=#333333           " set cursor line color
+hi Visual guibg=#333333               " set cursor line color on visual mode
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
