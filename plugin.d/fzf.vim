@@ -20,9 +20,9 @@ let g:fzf_nvim_statusline = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <C-h> :update <CR>:bp <CR>
 nnoremap <silent> <C-l> :update <CR>:bn <CR>
-noremap <silent> <Space>c :update <CR>:Commits<CR> 
-noremap <silent> <Space>f :update <CR>:Files<CR>
-noremap <silent> <Space>g :update <CR>:GFiles<CR> 
+nnoremap <silent> <Space>c :update <CR>:Commits<CR>
+nnoremap <silent> <Space>f :update <CR>:Files<CR>
+nnoremap <silent> <Space>g :update <CR>:GFiles<CR>
 
 let g:fzf_action = {
             \ 'ctrl-t': 'tab-split',
