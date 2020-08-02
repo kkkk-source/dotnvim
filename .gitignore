@@ -1,4 +1,10 @@
+# persistent undo
+undodir
+
+# temp
 .netrwhist
+
+# vim-plug
 autoload
 plugged
-undodir
+
