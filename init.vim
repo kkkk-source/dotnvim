@@ -13,7 +13,7 @@
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let sourcepath = 'source ~/.config/nvim/plug-config/'  
+let sourcepath = 'source ~/.config/nvim/plugin.d/'  
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugins settings                                                             "
