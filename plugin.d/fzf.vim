@@ -18,15 +18,10 @@ let g:fzf_nvim_statusline = 0
 " mapping
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <C-h> :update <CR>:bp <CR>
-nnoremap <silent> <C-l> :update <CR>:bn <CR>
-nnoremap <silent> <Space>c :update <CR>:Commits<CR>
-nnoremap <silent> <Space>f :update <CR>:Files<CR>
-nnoremap <silent> <Space>g :update <CR>:GFiles<CR>
 
 let g:fzf_action = {
             \ 'ctrl-t': 'tab-split',
-            \ 'ctrl-h': 'split',
+            \ 'ctrl-s': 'split',
             \ 'ctrl-v': 'vsplit'
             \}
 
@@ -34,6 +29,8 @@ let g:fzf_action = {
 " layout settings
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:50%' --layout reverse"
 let g:fzf_layout = { 
             \ 'window': 
             \   { 'width': 0.9, 'height': 0.8 } 
