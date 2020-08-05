@@ -12,21 +12,6 @@
 "  [k][https://neovim.io]                   \______/                           "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let sourcepath = 'source ~/.config/nvim/plugin.d/'  
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" plugins settings                                                             "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-execute sourcepath."vim-plug.vim"   | " github.com/junegunn/vim-plug 
-execute sourcepath."fzf.vim"        | " github.com/junegunn/fzf.vim
-execute sourcepath."airline.vim"    | " github.com/vim-airline/vim-airline
-execute sourcepath."vim-go.vim"     | " github.com/fatih/vim-go
-execute sourcepath."latex.vim"      | " 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " general settings                                                             "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -61,16 +46,7 @@ set smarttab                          "
 set laststatus=2                      " always show statusline
 set noshowmode                        " hide status message
 set noshowcmd                         " turn off the display of commads
+set cmdheight=2                       " number of screen lines to use for the cl
 set noruler                           " 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" color settings                                                               "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme pablo                     " 
-set colorcolumn=80                    " spot column 80
-hi ColorColumn guibg=#10C0C0          " set column color
-hi CursorLine guibg=#333333           " set cursor line color
-hi Visual guibg=#333333               " set cursor line color on visual mode
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
