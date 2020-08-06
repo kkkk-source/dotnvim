@@ -12,11 +12,6 @@
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" close all buffers except the current one
-"
-nmap <silent> <leader>o :update <bar>%bd<bar>e#<bar>bd#<bar>normal `"<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
 
