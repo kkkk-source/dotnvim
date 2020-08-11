@@ -50,3 +50,24 @@ set cmdheight=2                       " number of screen lines to use for the cl
 set noruler                           " 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" plugins managament                                                           "
+"                                                                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let sourcepath = '~/.config/nvim/plugin.d/'
+let plugins = [
+            \ 'vim-plug',
+            \ 'fzf',
+            \]
+
+for plug in plugins 
+    execute 'source '.sourcepath.plug.'.vim'
+endfor
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" mapping source                                                               "
+"                                                                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+execute 'source ~/.config/nvim/maps.vim'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
