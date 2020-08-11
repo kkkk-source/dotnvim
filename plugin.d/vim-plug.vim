@@ -21,7 +21,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
-    Plug 'vim-airline/vim-airline'
+    Plug 'agude/vim-eldar'
 
 call plug#end()
 
