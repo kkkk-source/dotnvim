@@ -1,73 +1,51 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                          $$\ $$\                                             "
-"                          $$ |$$ |                                            "
-"  $$$$$$\$$$$\   $$$$$$\  $$ |$$ |        $$\   $$\                           "
-"  $$  _$$  _$$\ $$  __$$\ $$ |$$ |$$$$$$\ $$ |  $$ |                          "
-"  $$ / $$ / $$ |$$ /  $$ |$$ |$$ |\______|$$ |  $$ |                          "
-"  $$ | $$ | $$ |$$ |  $$ |$$ |$$ |        $$ |  $$ |                          "
-"  $$ | $$ | $$ |\$$$$$$  |$$ |$$ |        \$$$$$$$ |                          "
-"  \__| \__| \__| \______/ \__|\__|         \____$$ |                          "
-"                                          $$\   $$ |                          "
-"                                          \$$$$$$  |                          "
-"  [k][https://neovim.io]                   \______/                           "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" general settings                                                             "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax on                             " enable syntax highlighting
-set incsearch                         " incremental search
-set nobackup                          " no auto backups
-set noerrorbells                      " disable vim bells sounds
-set number relativenumber             " display line numbers
-set nowrap                            " display long lines as just one line
-set hidden                            " needed to keep multiples buffers open
+"=============================================================================="
+" Plugins management - vim-plug - [https://github.com/junegunn/vim-plug]       "
+"=============================================================================="
+call plug#begin('~/.config/nvim/plugged')
+
+    "{{ The Go Programming Language }} 
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } 
+    "{{ Project Files Management }} 
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    "{{ Git Files Management }} 
+    Plug 'tpope/vim-fugitive'
+    "{{ Colorscheme }} 
+    Plug 'agude/vim-eldar'
+    "{{ Be Good at vim }} 
+    Plug 'ThePrimeagen/vim-be-good'
+
+call plug#end()
+"=============================================================================="
+" General settings                                                             "
+"=============================================================================="
+syntax on                             " Enable syntax highlighting.
+set incsearch                         " Incremental search.
+set nobackup                          " No auto backups.
+set noerrorbells                      " Disable vim bells sounds.
+set number relativenumber             " Display line numbers.
+set nowrap                            " Display long lines as just one line.
+set mouse=a                           " Enable use of the mouse for all modes.
+set termguicolors                     " Enable 24-bit RGB color.
+set cursorline                        " Spot cursor.
+set undofile                          " Save undos after files closes.
+set undodir=~/.config/nvim/undodir    " Where to save undo histories.
 set autowrite                         " 
-set mouse=a                           " enable use of the mouse for all modes 
-set termguicolors                     " enable 24-bit RGB color
-set cursorline                        " spot the cursor
-set undofile                          " save undos after files closes
-set undodir=~/.config/nvim/undodir    " where to save undo histories
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" tab and indent settings                                                      "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=4 softtabstop=4           " one tab = four spaces 
-set shiftwidth=4                      " one tab = fur spaces
-set expandtab                         " use spaces instead of tabs
-set smartindent                       " reacts to the syntax/style of the code
+set hidden                            " 
+"=============================================================================="
+" Tab and indent settings                                                      "
+"=============================================================================="
+set expandtab                         " Use spaces instead of tabs.
+set tabstop=4 softtabstop=4           " One tab = four spaces.
+set shiftwidth=4                      " One tab = four spaces.
+set smartindent                       " Reacts to the code's syntax/style.
 set smarttab                          " 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" statusline settings                                                          "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set laststatus=2                      " always show statusline
-set noshowmode                        " hide status message
-set noshowcmd                         " turn off the display of commads
-set cmdheight=2                       " number of screen lines to use for the cl
+"=============================================================================="
+" Statusline settings                                                          "
+"=============================================================================="
+set laststatus=2                      " Always show statusline.
+set noshowmode                        " Hide status message.
+set noshowcmd                         " Turn off the display of commads.
+set cmdheight=2                       " 
 set noruler                           " 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" plugins managament                                                           "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let sourcepath = '~/.config/nvim/plugin.d/'
-let plugins = [
-            \ 'vim-plug',
-            \ 'fzf',
-            \]
-
-for plug in plugins 
-    execute 'source '.sourcepath.plug.'.vim'
-endfor
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" mapping source                                                               "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-execute 'source ~/.config/nvim/maps.vim'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=============================================================================="
