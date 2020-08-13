@@ -1,0 +1,49 @@
+
+                This repository is vim config file
+=============================================================
+
+  +---------------------------------------------------------+
+  |                                                         |
+  | I'm looking for a good configuration that make me feel  |
+  | like I can fly over my keyboard with vim, whereas I     |
+  | save the history of all the changes.                    |
+  |                                                         |
+  +---------------------------------------------------------+
+
+                          architecture
+=============================================================
+
+  +-----------[Attempt to keep one reason of change]--------+
+  |                                                         |
+  | + plugin: in here I put the plugins configurations.     |
+  |                                                         |
+  | + plugin/own: in here I put all of my own 'plugins',    |
+  |   e.g., my own statusline or my own keybinds.           |
+  |                                                         |
+  +------------------[see commit 5564a18]-------------------+
+
+  .
+  ├── init.vim
+  │
+  ├── plugin
+  │   │
+  │   ├── fzf.vim
+  │   ├── vim-go.vim
+  │   │
+  │   └── own
+  │       │
+  │       ├── keybinds.vim
+  │       ├── statusline.vim
+  │       .
+  │
+  ├── README
+  │
+ 
+                          dependences
+=============================================================
+
+  + vim-plug
+
+
+                           the end?   
+=============================================================
