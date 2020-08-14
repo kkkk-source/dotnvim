@@ -1,26 +1,19 @@
+This repository is vim config file
+==================================
 
-                This repository is vim config file
-=============================================================
+I'm looking for a good configuration that make me feel like 
+I can fly over my keyboard with vim, whereas I save the 
+history of all the changes.
 
-  +---------------------------------------------------------+
-  |                                                         |
-  | I'm looking for a good configuration that make me feel  |
-  | like I can fly over my keyboard with vim, whereas I     |
-  | save the history of all the changes.                    |
-  |                                                         |
-  +---------------------------------------------------------+
+Dependences
+===========
 
-                          architecture
-=============================================================
+  + vim-plug 
 
-  +-----------[Attempt to keep one reason of change]--------+
-  |                                                         |
-  | + plugin: in here I put the plugins configurations.     |
-  |                                                         |
-  | + plugin/own: in here I put all of my own 'plugins',    |
-  |   e.g., my own statusline or my own keybinds.           |
-  |                                                         |
-  +------------------[see commit 5564a18]-------------------+
+Architecture
+============
+
+Attempt to keep one reason of change.
 
   .
   ├── init.vim
@@ -38,12 +31,11 @@
   │
   ├── README
   │
- 
-                          dependences
-=============================================================
 
-  + vim-plug
+  plugin: in here I put plugins configurations.
 
+  plugin/own: in here I put all of my own "plugins" e.g., 
+  my own statusline or my own keybinds. 
 
-                           the end?   
-=============================================================
+  why plugin folder? see commit 5564a18.
+
