@@ -12,6 +12,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-fugitive'
     "{{ Colorscheme }} 
     Plug 'agude/vim-eldar'
+    "{{ Statusline }}
+    Plug 'vim-airline/vim-airline'
     "{{ Be Good at vim }} 
     Plug 'ThePrimeagen/vim-be-good'
 
