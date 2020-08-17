@@ -44,5 +44,5 @@ nnoremap <silent> <expr> <C-k> &diff
             \ ? '[c' 
             \ : '<C-k>'
 
-" fugitive git status
-nnoremap <silent> <leader>; :vertical Gstatus<CR>
+" open fugitive (git status) on the vertical right-side
+nnoremap <silent> <leader>; :vertical rightb Gstatus<CR>
