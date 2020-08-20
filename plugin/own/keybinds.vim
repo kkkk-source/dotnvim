@@ -6,6 +6,15 @@
 nnoremap <silent> <C-h> :up <CR>:bp <CR>
 nnoremap <silent> <C-l> :up <CR>:bn <CR>
                     
+" These keybinds come from vim-go's wiki
+"
+" :cnext display the next error in the list.
+" :cprevious display the previous error in the list.
+" :close the quickfix window.
+nnoremap <silent><C-n> :cnext<CR>
+nnoremap <silent><C-m> :cprevious<CR>
+nnoremap <silent><leader>a :cclose<CR>
+
 " close all buffers but current one
 nnoremap <silent> <leader>o :up 
             \ <bar>%bd
@@ -21,13 +30,13 @@ nnoremap <silent> <leader>. :up <CR>:Files<CR>
 nnoremap <silent> <leader>, :Commits<CR>
 
 " ? get changes from target branch side
-" : put 2-way diff
+" : launch 2-way diff
 nnoremap <silent> <expr> <leader>2 &diff 
             \ ? ':diffget //2<CR>' 
             \ : ':Gvdiffsplit<CR><C-w>l'
 
 " ? get changes from current branch side
-" : put 3-way diff
+" : launch 3-way diff
 nnoremap <silent> <expr> <leader>3 &diff 
             \ ? ':diffget //3<CR>' 
             \ : ':Gvdiffsplit!<CR>'
