@@ -1,41 +1,40 @@
 This repository is vim config file
 ==================================
 
-I'm looking for a good configuration that make me feel like 
-I can fly over my keyboard with vim, whereas I save the 
-history of all the changes.
+I'm looking for a good configuration that make me feel like I can fly over my 
+keyboard with vim, whereas I save the history of all the changes that I make.
 
-Dependences
-===========
+Archives organization
+=====================
 
-  + vim-plug 
+Attempting to keep one reason of change.
 
-Architecture
-============
-
-Attempt to keep one reason of change.
+All the *.vim files into plugin folder is automatically sourced. That is
+the reason vim-plug is into init.vim, it is a plugin managament; it have 
+to be primarily loaded. Thereby it's completly safe to put all the 
+plugins files configuration into plugin folder. See commit 5564a18.
 
   .
   ├── init.vim
-  │
   ├── plugin
   │   │
   │   ├── fzf.vim
+  │   ├── vim-airline.vim
   │   ├── vim-go.vim
   │   │
   │   └── own
   │       │
+  │       ├── colorscheme.vim
   │       ├── keybinds.vim
-  │       ├── statusline.vim
-  │       .
   │
-  ├── README
-  │
+  ├── README 
 
-  plugin: in here I put plugins configurations.
+plugin: in here I put all the plugins files configuration.
+plugin/own: in here I put all my own changes, e.g., my own
+keybinds, or my own colorscheme changes.  
 
-  plugin/own: in here I put all of my own "plugins" e.g., 
-  my own statusline or my own keybinds. 
+Dependence
+==========
 
-  why plugin folder? see commit 5564a18.
+    plugin managament: vim-plug [from github.com/junegunn/vim-plug]
 
