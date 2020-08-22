@@ -6,14 +6,8 @@
 nnoremap <silent> <C-h> :up <CR>:bp <CR>
 nnoremap <silent> <C-l> :up <CR>:bn <CR>
                     
-" These keybinds come from vim-go's wiki
-"
-" :cnext display the next error in the list.
-" :cprevious display the previous error in the list.
-" :close the quickfix window.
-nnoremap <silent><C-n> :cnext<CR>
-nnoremap <silent><C-m> :cprevious<CR>
-nnoremap <silent><leader>a :cclose<CR>
+" close the quickfix window.
+noremap <silent><leader>a :cclose<CR>
 
 " close all buffers but current one
 nnoremap <silent> <leader>o :up 
@@ -42,16 +36,16 @@ nnoremap <silent> <expr> <leader>3 &diff
             \ : ':Gvdiffsplit!<CR>'
 
 " ? use <C-j> as ]c to move on between changes
-" : default <C-j> 
+" : display the next error in the list.
 nnoremap <silent> <expr> <C-j> &diff 
             \ ? ']c' 
-            \ : '<C-j>'
+            \ : ':cnext<CR>'
 
 " ? use <C-k> as [c to move on between changes
-" : default <C-k> 
+" : display the previous error in the list.
 nnoremap <silent> <expr> <C-k> &diff 
             \ ? '[c' 
-            \ : '<C-k>'
+            \ : ':cprevious<CR>'
 
 " open fugitive (git status) on the vertical right-side
 nnoremap <silent> <leader>; :vertical rightb Gstatus<CR>
