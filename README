@@ -7,12 +7,10 @@ keyboard with vim, whereas I save the history of all the changes that I make.
 Archives organization
 =====================
 
-Attempting to keep one reason of change.
-
-All the *.vim files into plugin folder is automatically sourced. That is
-the reason vim-plug is into init.vim, it is a plugin managament; it have 
-to be primarily loaded. Thereby it's completly safe to put all the 
-plugins files configuration into plugin folder. See commit 5564a18.
+All the *.vim files into plugin folder is automatically sourced. That is the 
+reason vim-plug is into init.vim, it is a plugin managament; it have to be 
+primarily loaded. Thereby it's completly safe to put all the plugins files 
+configuration into plugin folder. See commit 5564a18.
 
   .
   ├── init.vim
@@ -21,17 +19,19 @@ plugins files configuration into plugin folder. See commit 5564a18.
   │   ├── fzf.vim
   │   ├── vim-airline.vim
   │   ├── vim-go.vim
-  │   │
-  │   └── own
+  │   │                                  Attempting to keep one
+  │   └── own                               reason of change.
   │       │
   │       ├── colorscheme.vim
   │       ├── keybinds.vim
+  │       ├── latex.vim
   │
   ├── README 
-
+   
 plugin: in here I put all the plugins files configuration.
-plugin/own: in here I put all my own changes, e.g., my own
-keybinds, or my own colorscheme changes.  
+plugin/own: in here I put all my own changes, e.g., my own keybinds, my own 
+colorscheme changes or my own "plugins" like latex (nonetheless latex isn't 
+a plugin, it only has two lines of code, but works very well for me).
 
 Dependence
 ==========
