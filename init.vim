@@ -34,6 +34,8 @@ set termguicolors                     " Enable 24-bit RGB color.
 set cursorline                        " Spot cursor.
 set undofile                          " Save undos after files closes.
 set undodir=~/.config/nvim/undodir    " Where to save undo histories.
+set signcolumn=yes                    " Always draw the signcolumn. 
+set updatetime=100                    " Delay to up to date signs
 set autowrite                         " 
 set hidden                            " 
 "=============================================================================="
