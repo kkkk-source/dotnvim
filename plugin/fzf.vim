@@ -9,8 +9,8 @@ let g:fzf_action = {
 "=============================================================================="
 " Layout settings                                                              "
 "=============================================================================="
-let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:50%' --layout reverse"
+let $FZF_DEFAULT_OPTS="--reverse"
 let g:fzf_layout = { 
             \ 'window': 
-            \   { 'width': 1, 'height': 0.9 } 
+            \   { 'width': 0.8, 'height': 0.8 } 
             \}
