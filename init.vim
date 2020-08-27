@@ -10,6 +10,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf.vim'
     "{{ Git Files Management }} 
     Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'stsewd/fzf-checkout.vim'
     "{{ Colorscheme }} 
     Plug 'agude/vim-eldar'
     "{{ Statusline }}
