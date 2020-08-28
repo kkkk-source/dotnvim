@@ -2,13 +2,8 @@
 " [own] keybinds                                                      [Dvorak] "
 "=============================================================================="
 
-" change between buffers
-nnoremap <silent> <C-h> :up <CR>:bp <CR>
-nnoremap <silent> <C-l> :up <CR>:bn <CR>
-                    
 " close the quickfix window.
 noremap <silent><leader>a :cclose<CR>
-
 " close all buffers but current one
 nnoremap <silent> <leader>o :up 
             \ <bar>%bd
