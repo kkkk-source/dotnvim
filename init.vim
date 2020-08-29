@@ -23,6 +23,7 @@ call plug#end()
 "=============================================================================="
 " General settings                                                             "
 "=============================================================================="
+filetype plugin on                    " 
 syntax on                             " Enable syntax highlighting.
 set incsearch                         " Incremental search.
 set nobackup                          " No auto backups.
@@ -35,7 +36,8 @@ set cursorline                        " Spot cursor.
 set undofile                          " Save undos after files closes.
 set undodir=~/.config/nvim/undodir    " Where to save undo histories.
 set signcolumn=yes                    " Always draw the signcolumn. 
-set updatetime=100                    " Delay to up to date signs
+set updatetime=100                    " Delay to up to date signs.
+set colorcolumn=80                    " Spot column 80.
 set autowrite                         " 
 set hidden                            " 
 "=============================================================================="
