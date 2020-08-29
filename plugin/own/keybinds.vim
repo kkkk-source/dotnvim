@@ -11,12 +11,12 @@ nnoremap <silent> <leader>o :up
             \ <bar>bd#
             \ <bar>normal `"<CR>
 
-" fzf search files
-nnoremap <silent> <leader>p :up <CR>:GFiles<CR>
 " fzf search git files
-nnoremap <silent> <leader>. :up <CR>:Files<CR>
-" fzf search git commits
-nnoremap <silent> <leader>, :Commits<CR>
+nnoremap <silent> <space>p :up <CR>:Files<CR>
+nnoremap <silent> <space>. :up <CR>:GFiles<CR>
+nnoremap <silent> <space>, :Commits<CR>
+nnoremap <silent> <space>' :GCheckout<CR>
+nnoremap <silent> <leader>' :GCheckoutTag<CR>
 
 " ? get changes from target branch side
 " : launch 2-way diff
