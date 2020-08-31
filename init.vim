@@ -54,6 +54,6 @@ set smarttab                          "
 set laststatus=2                      " Always show statusline.
 set noshowmode                        " Hide status message.
 set noshowcmd                         " Turn off the display of commads.
-set cmdheight=2                       " 
+set cmdheight=1                       " 
 set noruler                           " 
 "=============================================================================="
