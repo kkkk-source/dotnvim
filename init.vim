@@ -1,59 +1,51 @@
-"=============================================================================="
-" Plugins management - vim-plug - [https://github.com/junegunn/vim-plug]       "
-"=============================================================================="
+let mapleader=" "
+
+filetype plugin indent on
+syntax on
+set backspace=indent,eol,start
+set hidden
+set incsearch
+set noswapfile
+set nohlsearch
+set nobackup
+set nowritebackup
+set number relativenumber
+set scrolloff=8
+set undodir=~/.config/nvim/undo
+set undofile
+set updatetime=300
+set signcolumn=yes
+set grepprg=ag\ --vimgrep
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+
+nmap <leader>y "+y
+nmap <leader>p "+p
+nmap <leader>P "+P
+
+" space s c w --> search current word
+nmap <leader>scw :gr <C-R>=expand("<cword>")<CR><CR>
+
 call plug#begin('~/.config/nvim/plugged')
-
-    "{{ The Go Programming Language }} 
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } 
-    "{{ Project Files Management }} 
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    "{{ Git Files Management }} 
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'stsewd/fzf-checkout.vim'
-    "{{ Colorscheme }} 
-    Plug 'agude/vim-eldar'
-    "{{ Statusline }}
-    Plug 'vim-airline/vim-airline'
-    "{{ Be Good at vim }} 
-    Plug 'ThePrimeagen/vim-be-good'
-
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
-"=============================================================================="
-" General settings                                                             "
-"=============================================================================="
-filetype plugin on                    " 
-syntax on                             " Enable syntax highlighting.
-set incsearch                         " Incremental search.
-set nobackup                          " No auto backups.
-set noerrorbells                      " Disable vim bells sounds.
-set number relativenumber             " Display line numbers.
-set nowrap                            " Display long lines as just one line.
-set mouse=a                           " Enable use of the mouse for all modes.
-set termguicolors                     " Enable 24-bit RGB color.
-set cursorline                        " Spot cursor.
-set undofile                          " Save undos after files closes.
-set undodir=~/.config/nvim/undodir    " Where to save undo histories.
-set signcolumn=yes                    " Always draw the signcolumn. 
-set updatetime=100                    " Delay to up to date signs.
-set colorcolumn=80                    " Spot column 80.
-set autowrite                         " 
-set hidden                            " 
-"=============================================================================="
-" Tab and indent settings                                                      "
-"=============================================================================="
-set expandtab                         " Use spaces instead of tabs.
-set tabstop=4 softtabstop=4           " One tab = four spaces.
-set shiftwidth=4                      " One tab = four spaces.
-set smartindent                       " Reacts to the code's syntax/style.
-set smarttab                          " 
-"=============================================================================="
-" Statusline settings                                                          "
-"=============================================================================="
-set laststatus=2                      " Always show statusline.
-set noshowmode                        " Hide status message.
-set noshowcmd                         " Turn off the display of commads.
-set cmdheight=1                       " 
-set noruler                           " 
-"=============================================================================="
+
+let g:fzf_layout = { 'down': '40%' }
+
+" space f /   --> search files with fzf
+" space f t   --> toggle files tree
+nmap <leader>f/ :Files<CR>
+nmap <leader>ft :30Lexplore!<CR>
+
+" space s a --> search word with ag
+nmap <leader>sa :Ag<CR>
+
+" nmap <leader>gd <Plug>(coc-definition)
+" nmap <leader>gr <Plug>(coc-references)
+" nmap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+" space g f -> search git files with fzf
+nmap <leader>gs :Gstatus<CR>
