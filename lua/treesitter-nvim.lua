@@ -1,19 +1,17 @@
-local ts_config = require 'nvim-treesitter.configs'
-
-ts_config.setup {
+require('nvim-treesitter.configs').setup {
 	ensure_installed = {
 		"go",
-		-- "c",
+		"c",
 		-- "cpp",
 		-- "rust",
-		-- "javascript",
-		-- "typescript",
-		-- "tsx",
+		"javascript",
+		"typescript",
+		"tsx",
 		"bash",
 		"lua",
-		-- "html",
-		-- "sass",
-		-- "json",
+		"html",
+		"scss",
+		"json",
 	},
 	highlight = {
 		enable = true,
