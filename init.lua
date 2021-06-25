@@ -52,6 +52,9 @@ vim.api.nvim_set_keymap(
   }
 )
 
+-- commands
+vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank()]])
+
 -- highlights
 vim.cmd([[ highlight VertSplit cterm=NONE ]])
-vim.cmd([[ highlight SignColumn ctermbg=NONE ctermfg=NONE ]])
+vim.cmd([[ highlight SignColumn ctermbg=NONE ]])
